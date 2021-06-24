@@ -7,8 +7,7 @@ fgbg = cv.createBackgroundSubtractorKNN()
 while True:
 	ret, f = camera.read()
 	if ret == True:
-		
-	fgmask = fgbg.apply(f)
+		fgmask = fgbg.apply(f)
 	fgmask = cv.morphologyEx(fgmask, cv.MORPH_OPEN, kernel)
 
 	cv.imshow('test',fgmask)
